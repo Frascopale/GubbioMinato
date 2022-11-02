@@ -21,6 +21,10 @@ if ( gamer==2){
     return console.log("Hai vinto!!!")
 }
 console.log(gamer);
+if ( gamer!= poosition){
+    field.displayGrid();
+    return console.log("Hai pestato la cacca quindi hai perso!!!")
+}
 }
 
 /*field.grid.gr[poosition]='0';
