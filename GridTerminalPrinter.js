@@ -1,4 +1,4 @@
-const prompt = require ('prompt-sync')();
+
 const GridHandler = require ('./Gridhandler');
 const grid = require ('./grid');
 
@@ -8,20 +8,23 @@ let GridTerminalPrinter = class {
 
     }
 
-    buildGrid(){
-        for (let i=0; i<3 ; i++){
-            if(i%3 ==0 && i !=0){
-                grid = grid + '\n';
-            }
-            
+    buildGrid(grid){
+        
+        let field=[];
+       for(let i=0;i<9;i++){
+        if(i%3==0 && i !=0){
+            field = field +'\n'
         }
-        return grid;
+        
+        field = field + this.grid.gr[i] + ' ';
+       }
+       return field;
     }
 
-    displayGrid(){
-        this.buildGrid(grid);
-       return console.log(grid);
-    }
+   displayGrid(){
+    let field = this.buildGrid();
+    return console.log(field);
+   }
 }
 
 

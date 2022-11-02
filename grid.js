@@ -1,4 +1,6 @@
 
-let grid = ['-','-','-','-','-','-','-','-','-'];
+let grid = {
+    gr : ['-','-','-','-','-','-','-','-','-'],
+}
 
-module.exports = grid
+module.exports = grid;
